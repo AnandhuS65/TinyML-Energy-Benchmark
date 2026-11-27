@@ -1,0 +1,4 @@
+model,params,fp32_kb,int8_kb,fp32_test_acc,int8_test_acc,acc_drop_pct
+small,1470,12.72,10.59,91.79,91.45,0.34
+medium,4726,25.2,14.79,93.35,93.35,0.0
+large,16614,71.07,28.37,92.4,91.96,0.44
