@@ -40,8 +40,9 @@ To prevent measurement overhead and host-PC back-powering from skewing results, 
 
 ## Repository Structure
 ```text
-tinyml-energy-benchmark/
-├── models/             # UCI HAR training scripts, FP32/INT8 .tflite models & C headers
+TinyML-Energy-Benchmark/
+├── models/             # FP32/INT8 .tflite models, scaler_params.npz & C headers
+├── notebooks/          # UCI HAR model training notebook (train_har.ipynb)
 ├── firmware/           # Deployment code for each target & logger
 │   ├── pico/           # Raspberry Pi Pico H (TFLite Micro)
 │   ├── esp32s3/        # ESP32-S3 (ESP-IDF + TFLite Micro / ESP-NN)
@@ -49,6 +50,7 @@ tinyml-energy-benchmark/
 │   └── logger/         # Dedicated Pico H INA219 + GPIO timestamp logger
 ├── data/
 │   ├── raw/            # Archived read-only CSV measurement logs
-│   └── processed/      # Aggregated metrics & uncertainty budgets
+│   └── processed/      # Aggregated metrics, baselines & uncertainty budgets
 ├── analysis/           # Python scripts (pandas, SciPy, Matplotlib) for plots & stats
-└── docs/               # Weekly progress log, wiring guides & calibration notes
+├── docs/               # Weekly progress log, wiring guides & calibration notes
+└── requirements.txt    # Python environment dependencies (Pi 5 / analysis)
